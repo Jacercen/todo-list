@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <h1>Lista de Tareas</h1>
+    </header>
+
+    <main class="container">
+      <form action="#">
+        <div>
+          <label for="task-input">Nueva tarea</label>
+          <input
+            id="task-input"
+            name="task"
+            type="text"
+            placeholder="Escribe una tarea..."
+            required
+            autocomplete="off"
+          />
+        </div>
+        <button type="submit" class="btn">Agregar tarea</button>
+      </form>
+
+      <section class="task-list">
+        <ul>
+          <li class="task-item">
+            <label class="task-label">
+              <input type="checkbox" name="task" class="task-checkbox" />
+              <span class="task-text">Realizar el HTML</span>
+            </label>
+          </li>
+
+          <li class="task-item">
+            <label class="task-label">
+              <input type="checkbox" name="task" class="task-checkbox" />
+              <span class="task-text">Realizar el CSS</span>
+            </label>
+          </li>
+
+          <li class="task-item">
+            <label class="task-label">
+              <input type="checkbox" name="task" class="task-checkbox" />
+              <span class="task-text">Subirlo a GitHub </span>
+            </label>
+          </li>
+        </ul>
+      </section>
+
+      <section class="actions">
+        <button class="btn btn-dlt-completed">Eliminar completadas</button>
+        <button class="btn btn-dlt-all">Eliminar todas</button>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        © 2026 Javier Cervera ·
+        <a href="https://github.com/jacercen" target="_blank"> GitHub </a>
+      </p>
+    </footer>
+  </body>
+</html>
