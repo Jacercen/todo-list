@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Sekuya&display=swap");
 :root {
   /* base */
   --bg: #000103;
@@ -17,7 +18,10 @@
 
 /* Body */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Libre Baskerville", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   background: var(--bg);
   color: var(--text);
 }
@@ -179,4 +183,16 @@ input[type="text"]:focus {
     padding: 10px;
     gap: 10px;
   }
+}
+/* Fuentes */
+.libre-baskerville > {
+  font-family: "Libre Baskerville", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.sekuya-regular {
+  font-family: "Sekuya", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
