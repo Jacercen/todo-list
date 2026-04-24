@@ -50,7 +50,7 @@ Este proyecto forma parte de mi aprendizaje en desarrollo web, con el objetivo d
 
 ## 📸 Vista previa
 
-![Preview](./image.png)
+![Preview](./preview.png)
 
 ---
 
