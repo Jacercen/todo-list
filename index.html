@@ -25,11 +25,13 @@
             autocomplete="off"
           />
         </div>
-        <button type="submit" class="btn">Agregar tarea</button>
+        <button type="submit" class="btn" id="add-task-btn">
+          Agregar tarea
+        </button>
       </form>
 
       <section class="task-list">
-        <ul>
+        <ul id="task-list">
           <li class="task-item">
             <label class="task-label">
               <input type="checkbox" name="task" class="task-checkbox" />
@@ -54,8 +56,10 @@
       </section>
 
       <section class="actions">
-        <button class="btn btn-dlt-completed">Eliminar completadas</button>
-        <button class="btn btn-dlt-all">Eliminar todas</button>
+        <button id="btn-dlt-completed" class="btn btn-dlt-completed">
+          Eliminar completadas
+        </button>
+        <button id="btn-dlt-all" class="btn btn-dlt-all">Eliminar todas</button>
       </section>
     </main>
 

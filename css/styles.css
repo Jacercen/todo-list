@@ -1,198 +1,279 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Sekuya&display=swap");
+
+/* =========================
+   VARIABLES
+   ========================= */
 :root {
-  /* base */
   --bg: #000103;
   --surface: #333138;
   --surface-light: #515052;
+
   --text: #fffffa;
+
   --accent: #3b82f6;
   --accent-hover: #2563eb;
 }
 
-/* Reset */
+/* =========================
+   RESET
+   ========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
+/* =========================
+   BODY
+   ========================= */
 body {
-  font-family: "Libre Baskerville", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+  font-family: "Inter", sans-serif;
   background: var(--bg);
   color: var(--text);
+  min-height: 100vh;
 }
-/* Header */
+
+/* =========================
+   HEADER
+   ========================= */
 .header {
   padding: 20px;
   text-align: center;
+
   background: var(--surface);
   border-bottom: 2px solid var(--accent);
 }
-/* Main */
+
+/* =========================
+   MAIN CONTAINER
+   ========================= */
 .container {
   max-width: 600px;
+
   margin: 20px auto;
   padding: 15px;
+
   display: flex;
   flex-direction: column;
   gap: 20px;
+
   background: var(--surface);
+
   border-radius: 12px;
+
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
-/* Footer*/
-.footer {
-  text-align: center;
-  padding: 10px;
-  font-size: 0.8rem;
-  color: var(--surface-light);
-}
-/* form */
+
+/* =========================
+   FORM
+   ========================= */
 form {
-  padding: 10px;
-  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
+
+  padding: 10px;
 }
 
+/* Input group */
 form div {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 10px;
 }
 
-/* input */
+/* Label */
+label {
+  text-align: center;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* =========================
+   INPUT
+   ========================= */
 input[type="text"] {
-  flex: 1;
+  width: 100%;
+
   padding: 10px;
-  border-radius: 6px;
+
   border: none;
+  border-radius: 6px;
+
   background: var(--surface-light);
   color: var(--text);
+
+  transition: all 0.2s ease;
 }
 
 input[type="text"]:focus {
   outline: 2px solid var(--accent);
+
+  background: #5a585c;
 }
 
-/* button */
+/* =========================
+   BUTTONS
+   ========================= */
 .btn {
   padding: 12px;
+
   border: none;
   border-radius: 6px;
+
   background: var(--accent);
   color: white;
+
   cursor: pointer;
+
   transition: all 0.2s ease;
 }
 
 .btn:hover {
   background: var(--accent-hover);
+
   box-shadow: 0 0 4px var(--accent);
+
   transform: translateY(-1px);
 }
 
 .btn:active {
   transform: translateY(0);
-  box-shadow: 0 0 4px var(--accent);
 }
-/* container task-list */
+
+/* =========================
+   TASK LIST
+   ========================= */
 .task-list {
   padding: 8px;
 }
+
 .task-list ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
+
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-/* task item */
+/* =========================
+   TASK ITEM
+   ========================= */
 .task-item {
-  background: var(--surface-light);
   padding: 10px;
+
+  background: var(--surface-light);
+
   border-radius: 6px;
-  transition: transform 0.2s ease;
+
   border: 1px solid rgba(255, 255, 255, 0.05);
+
+  transition: all 0.2s ease;
 }
+
 .task-item:hover {
   background: #5a585c;
+
+  transform: translateX(3px);
 }
-/* task label */
+
+/* =========================
+   TASK LABEL
+   ========================= */
 .task-label {
   display: flex;
   align-items: center;
   gap: 10px;
+
   cursor: pointer;
 }
-/* Mod de los checkbox*/
+
+/* Checkbox */
 .task-checkbox {
   width: 20px;
   height: 20px;
+
+  flex-shrink: 0;
+
   accent-color: var(--accent);
+
   cursor: pointer;
 }
+
+/* Completed task */
 .task-checkbox:checked ~ .task-text {
   text-decoration: line-through;
+
   opacity: 0.6;
 }
-/* action button */
+
+/* =========================
+   ACTION BUTTONS
+   ========================= */
 .actions {
-  padding: 10px;
-  border-radius: 10px;
   display: flex;
+  flex-direction: column;
   gap: 10px;
+
+  padding: 10px;
 }
+
 .actions .btn {
   flex: 1;
 }
-/*footer mod */
+
+/* =========================
+   FOOTER
+   ========================= */
+.footer {
+  padding: 10px;
+
+  text-align: center;
+
+  font-size: 0.8rem;
+
+  color: var(--surface-light);
+}
+
+/* Footer links */
 .footer a {
   color: var(--accent);
+
   text-decoration: none;
+
   transition: all 0.2s ease;
 }
 
 .footer a:hover {
   color: var(--accent-hover);
+
   text-shadow: 0 0 6px var(--accent);
 }
+
 .footer a:visited {
   color: var(--accent);
 }
-/* Responsive */
-@media (max-width: 480px) {
-  .header {
-    padding: 15px;
-  }
-  form div {
-    flex-direction: column;
-    align-items: stretch;
-  }
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (min-width: 480px) {
   .actions {
-    flex-direction: column;
-  }
-  .container {
-    padding: 10px;
-    gap: 10px;
+    flex-direction: row;
   }
 }
-/* Fuentes */
-.libre-baskerville > {
+
+/* =========================
+   FONTS
+   ========================= */
+.libre-baskerville {
   font-family: "Libre Baskerville", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
 }
+
 .sekuya-regular {
   font-family: "Sekuya", system-ui;
-  font-weight: 400;
-  font-style: normal;
 }
