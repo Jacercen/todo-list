@@ -1,6 +1,6 @@
 # Lista de Tareas
 
-Aplicación sencilla de lista de tareas desarrollada con **HTML y CSS**, enfocada en la práctica de maquetación, diseño moderno y responsive.
+Aplicación de lista de tareas desarrollada con HTML, CSS y JavaScript Vanilla, enfocada en la manipulación del DOM, gestión de estado y persistencia de datos con localStorage.
 
 ---
 
@@ -10,6 +10,10 @@ Aplicación sencilla de lista de tareas desarrollada con **HTML y CSS**, enfocad
 - Marcar tareas como completadas
 - Diseño moderno con tema oscuro
 - Interfaz limpia y fácil de usar
+- Eliminar tareas individuales
+- Eliminar tareas completadas
+- Eliminar todas las tareas
+- Persistencia automática mediante localStorage
 - Responsive:
   - 📱 Móvil (vertical y horizontal)
   - 💻 Escritorio
@@ -21,6 +25,9 @@ Aplicación sencilla de lista de tareas desarrollada con **HTML y CSS**, enfocad
 - HTML5
 - CSS3 (Flexbox)
 - Variables CSS (custom properties)
+- JavaScript Vanilla
+- LocalStorage API
+- Manipulación del DOM
 
 ---
 
@@ -42,9 +49,11 @@ La aplicación está adaptada para diferentes tamaños de pantalla:
 
 Este proyecto forma parte de mi aprendizaje en desarrollo web, con el objetivo de:
 
-- Practicar estructura HTML semántica
-- Mejorar el uso de CSS (Flexbox, variables, responsive)
-- Entender la importancia del diseño y la experiencia de usuario (UX)
+- Practicar manipulación del DOM
+- Gestionar el estado de la aplicación mediante JavaScript
+- Aplicar el patrón Single Source of Truth
+- Implementar persistencia de datos con localStorage
+- Mejorar la organización y mantenibilidad del código
 
 ---
 
@@ -56,7 +65,7 @@ Este proyecto forma parte de mi aprendizaje en desarrollo web, con el objetivo d
 
 ## 🔗 Demo
 
-https://jacercen.github.io/todo-list/
+[Ver demo](https://jacercen.github.io/todo-list-js/)
 
 ---
 
@@ -64,16 +73,18 @@ https://jacercen.github.io/todo-list/
 
 **Javier Cervera**
 
-- GitHub: https://github.com/jacercen
+- GitHub: [@jacercen](https://github.com/jacercen)
 
 ---
 
 ## 📌 Notas
 
-Este proyecto es una base que se podrá ampliar en el futuro añadiendo:
+Posibles mejoras futuras:
 
-- JavaScript para funcionalidad completa
-- Persistencia de datos
-- Mejoras visuales y animaciones
+- Edición de tareas
+- Filtros (todas / completadas / pendientes)
+- Drag & drop
+- Animaciones más avanzadas
+- Tests y refactorización
 
 ---

@@ -83,7 +83,7 @@ form div {
 }
 
 /* Label */
-label {
+.form-label {
   text-align: center;
 
   text-transform: uppercase;
@@ -107,7 +107,9 @@ input[type="text"] {
   background: var(--surface-light);
   color: var(--text);
 
-  transition: all 0.2s ease;
+  transition:
+    background 0.2s ease,
+    outline 0.2s ease;
 }
 
 input[type="text"]:focus {
@@ -130,19 +132,55 @@ input[type="text"]:focus {
 
   cursor: pointer;
 
-  transition: all 0.2s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .btn:hover {
   background: var(--accent-hover);
 
-  box-shadow: 0 0 4px var(--accent);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
 
   transform: translateY(-1px);
 }
 
 .btn:active {
   transform: translateY(0);
+}
+
+/* Delete button */
+.delete-btn {
+  background: transparent;
+  border: none;
+
+  color: #ff6b6b;
+
+  font-size: 1rem;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.delete-btn:hover {
+  color: #ff3b3b;
+
+  transform: scale(1.1);
+}
+
+/* =========================
+   EMPTY MESSAGE
+   ========================= */
+.empty-message {
+  text-align: center;
+
+  opacity: 0.7;
+
+  padding: 5px;
 }
 
 /* =========================
@@ -164,6 +202,10 @@ input[type="text"]:focus {
    TASK ITEM
    ========================= */
 .task-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
   padding: 10px;
 
   background: var(--surface-light);
@@ -172,24 +214,15 @@ input[type="text"]:focus {
 
   border: 1px solid rgba(255, 255, 255, 0.05);
 
-  transition: all 0.2s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
 .task-item:hover {
   background: #5a585c;
 
   transform: translateX(3px);
-}
-
-/* =========================
-   TASK LABEL
-   ========================= */
-.task-label {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  cursor: pointer;
 }
 
 /* Checkbox */
@@ -202,6 +235,13 @@ input[type="text"]:focus {
   accent-color: var(--accent);
 
   cursor: pointer;
+}
+
+/* Task text */
+.task-text {
+  flex: 1;
+
+  word-break: break-word;
 }
 
 /* Completed task */
@@ -245,7 +285,9 @@ input[type="text"]:focus {
 
   text-decoration: none;
 
-  transition: all 0.2s ease;
+  transition:
+    color 0.2s ease,
+    text-shadow 0.2s ease;
 }
 
 .footer a:hover {
@@ -264,6 +306,14 @@ input[type="text"]:focus {
 @media (min-width: 480px) {
   .actions {
     flex-direction: row;
+  }
+  form div {
+    flex-direction: row;
+    align-items: center;
+  }
+  .form-label {
+    min-width: 140px;
+    text-align: left;
   }
 }
 
